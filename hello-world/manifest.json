@@ -1,6 +1,6 @@
 {
     "name": "Hello World Chrome Extention",
-    "description": "Build an Extension!",
+    "description": "White to Dark!",
     "version": "1.0",
     "manifest_version": 3,
     "background": {

@@ -50,7 +50,7 @@ function setPageBackgroundColor() {
             let h4 = Object.values(document.querySelectorAll('h4'))
             let h5 = Object.values(document.querySelectorAll('h5'))
             let h6 = Object.values(document.querySelectorAll('h6'))
-        
+
             return p.concat(li).concat(i).concat(b).concat(h1).concat(h2).concat(h3).concat(h4).concat(h5).concat(h6)
         }
         
