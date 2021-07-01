@@ -1,0 +1,10 @@
+{
+    "name": "Google Translate on new window",
+    "description": "Select text and right click 'translate...' to translate",
+    "version": "1.0",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": ["storage", "activeTab", "scripting", "contextMenus", "tabs"]
+}
