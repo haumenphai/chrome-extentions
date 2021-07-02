@@ -8,7 +8,10 @@ chrome.runtime.onInstalled.addListener(() => {
 })
 
 var left = 500
-chrome.windows.getCurrent((window) => left = window.width / 4)
+chrome.windows.getCurrent((window) => {
+    left = window.width / 4
+    var language = window.navigator.userLanguage || window.navigator.language;
+})
 
 var langIn = 'auto'
 var langOut = 'vi'
