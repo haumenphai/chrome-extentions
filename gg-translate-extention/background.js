@@ -12,8 +12,11 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
     console.log('click context menu')
     chrome.storage.local.get(['window_id'], (values) => chrome.windows.remove(values.window_id))  
 
+    langin = 'auto'
+    langout = 'vi'
+
     chrome.windows.create({
-        url: 'https://translate.google.com/?hl=vi&sl=en&tl=vi&text=' + info.selectionText + '&op=translate',
+        url: 'https://translate.google.com/?hl='+langout+'&sl='+langin+'&tl='+langout+'&text=' + info.selectionText + '&op=translate',
         focused: true,
         height: 500 
     }, (window) => chrome.storage.local.set({'window_id': window.id}))
