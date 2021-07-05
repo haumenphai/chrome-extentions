@@ -1,3 +1,8 @@
+var left = 500
+var langIn = 'auto'
+var langOut = 'EN'
+
+
 chrome.runtime.onInstalled.addListener(() => {
     chrome.contextMenus.create({
         id: 'upupup123',
@@ -5,18 +10,15 @@ chrome.runtime.onInstalled.addListener(() => {
         type: 'normal',
         contexts: ['selection'],
     })
+    chrome.storage.local.set({'langIn': langIn, 'langOut': langOut})
 })
 
-var left = 500
+
 chrome.windows.getCurrent((window) => {
     left = window.width / 4
-    // todo: 
-    var language = window.navigator.userLanguage || window.navigator.language;
+    langOut = navigator.language.substring(0,2).toUpperCase()
+    chrome.storage.local.set({'langOut': langOut})
 })
-
-var langIn = 'auto'
-var langOut = 'vi'
-
 
 chrome.contextMenus.onClicked.addListener((info, tab) => {
     console.log('click context menu')

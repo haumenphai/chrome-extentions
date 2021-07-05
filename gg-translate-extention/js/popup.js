@@ -5,7 +5,6 @@ let langOutSelect = document.getElementById("langOut")
 chrome.storage.local.get(['langIn', 'langOut'], (values) => {
     langInSelect.value = values.langIn
     langOutSelect.value = values.langOut
-
 });
 
 btnSaveSetting.addEventListener("click", async () => {
