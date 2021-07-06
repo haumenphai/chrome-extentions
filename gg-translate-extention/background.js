@@ -25,8 +25,8 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
     chrome.storage.local.get(['window_id'], (values) => chrome.windows.remove(values.window_id))
 
     chrome.storage.local.get(['langIn', 'langOut'], (values) => {
-        langIn = values.langIn
-        langOut = values.langOut
+        langIn = values.langIn.toLowerCase()
+        langOut = values.langOut.toLowerCase()
 
         chrome.windows.create({
             url: 'https://translate.google.com/?hl=' + langOut + '&sl=' + langIn + '&tl=' + langOut + '&text=' + info.selectionText + '&op=translate',
