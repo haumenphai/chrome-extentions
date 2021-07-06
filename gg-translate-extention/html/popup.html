@@ -6,14 +6,19 @@
         .textL {
             font-size: 17px;
         }
+        .select-language {
+            height: 20px;
+        }
+       
     </style>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body style="font-family: Arial, Helvetica, sans-serif; width: 400px;">
     <span class="textL"> <b>Setting</b></span>
     <button id="btnSaveSetting">Save Setting</button> <br><br>
 
-    <select id="langIn">
+    <select id="langIn" class="select-language">
         <option value="auto">Auto</option>
         <option value="AF">Afrikaans</option>
         <option value="SQ">Albanian</option>
@@ -89,9 +94,12 @@
         <option value="XH">Xhosa</option>
     </select>
 
-    <img src="../images/arrow2.png" alt="" width="30px" height="10px">
+    <button id="btnSwitchLanguage">
+        <img src="../images/two-way-arrows.png" alt="" class="btn-switch-language" style="height: 20px;">
+    </button>
 
-    <select id="langOut">
+
+    <select id="langOut" class="select-language">
         <option value="AF">Afrikaans</option>
         <option value="SQ">Albanian</option>
         <option value="AR">Arabic</option>

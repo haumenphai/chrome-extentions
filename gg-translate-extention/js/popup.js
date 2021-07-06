@@ -1,6 +1,15 @@
 let btnSaveSetting = document.getElementById("btnSaveSetting")
 let langInSelect = document.getElementById("langIn")
 let langOutSelect = document.getElementById("langOut")
+let btnSwitchLanguage = document.getElementById("btnSwitchLanguage")
+
+btnSwitchLanguage.addEventListener("click", async () => {
+    if (langInSelect.value != 'auto') {
+        let t = langInSelect.value
+        langInSelect.value = langOutSelect.value
+        langOutSelect.value = t   
+    }
+})
 
 chrome.storage.local.get(['langIn', 'langOut'], (values) => {
     langInSelect.value = values.langIn
