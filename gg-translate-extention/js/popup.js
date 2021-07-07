@@ -17,6 +17,5 @@ chrome.storage.local.get(['langIn', 'langOut'], (values) => {
 });
 
 btnSaveSetting.addEventListener("click", async () => {
-    btnSaveSetting.innerText = langInSelect.value + ' - ' + langOutSelect.value
     chrome.storage.local.set({'langIn': langInSelect.value, 'langOut': langOutSelect.value}, () => {});
 })

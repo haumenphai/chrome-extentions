@@ -31,9 +31,9 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
         chrome.windows.create({
             url: 'https://translate.google.com/?hl=' + langOut + '&sl=' + langIn + '&tl=' + langOut + '&text=' + info.selectionText + '&op=translate',
             focused: true,
-            height: 500,
+            height: 600,
             width: 1000,
             left: left
-        }, (window) => chrome.storage.local.set({ 'window_id': window.id }))
+        }, (window) => chrome.storage.local.set({   'window_id': window.id}))
     });  
 })
