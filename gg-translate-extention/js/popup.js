@@ -4,7 +4,7 @@ let langOutSelect = document.getElementById("langOut")
 let btnSwitchLanguage = document.getElementById("btnSwitchLanguage")
 
 btnSwitchLanguage.addEventListener("click", async () => {
-    if (langInSelect.value != 'auto') {
+    if (langInSelect.value !== 'auto') {
         let t = langInSelect.value
         langInSelect.value = langOutSelect.value
         langOutSelect.value = t   

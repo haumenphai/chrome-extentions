@@ -1,6 +1,6 @@
 var left = 500
 var langIn = 'auto'
-var langOut = 'EN'
+var langOut = 'VI'
 
 
 chrome.runtime.onInstalled.addListener(() => {
@@ -16,8 +16,8 @@ chrome.runtime.onInstalled.addListener(() => {
 
 chrome.windows.getCurrent((window) => {
     left = window.width / 4
-    langOut = navigator.language.substring(0,2).toUpperCase()
-    chrome.storage.local.set({'langOut': langOut})
+    // langOut = navigator.language.substring(0,2).toUpperCase()
+    // chrome.storage.local.set({'langOut': langOut})
 })
 
 chrome.contextMenus.onClicked.addListener((info, tab) => {
